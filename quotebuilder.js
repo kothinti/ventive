@@ -112,8 +112,11 @@ $(document).ready(function(){
     });
     
     $('.btn-next4').click(function(){
-    	$('.quote-step4').hide();
-      $('.quote-step5').show();
+      if(($(this).find('option').filter(':selected').text() != "Select one...")
+	&& ($('.form__select-field._1').find('option').filter(':selected').text() != "Select one...")){
+	      $('.quote-step4').hide();
+	      $('.quote-step5').show();
+      }
     });
     
     
