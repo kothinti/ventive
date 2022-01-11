@@ -87,7 +87,8 @@ $(document).ready(function(){
         }
     });
    
-    //Step 4
+
+    //Step 4 Modified
     $('.form__select-field._1').on('change', function () {
       if(($(this).find('option').filter(':selected').text() != "Select one...")
 	$$ ($('.form__select-field._2').find('option').filter(':selected').text() != "Select one...")){
