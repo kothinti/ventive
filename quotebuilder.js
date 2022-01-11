@@ -116,6 +116,8 @@ $(document).ready(function(){
 	&& ($('.form__select-field._1').find('option').filter(':selected').text() != "Select one...")){
 	      $('.quote-step4').hide();
 	      $('.quote-step5').show();
+      }else{
+      	$('.error-code').removeClass('hide');
       }
     });
     
