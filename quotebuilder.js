@@ -89,7 +89,8 @@ $(document).ready(function(){
    
     //Step 4
     $('.form__select-field._1').on('change', function () {
-      if(($(this).find('option').filter(':selected').text() != "Select one...")){
+      if(($(this).find('option').filter(':selected').text() != "Select one...")
+	$$ ($('.form__select-field._2').find('option').filter(':selected').text() != "Select one...")){
       	$('.error-code').addClass('hide');
         $('.btn-next4').removeClass('btn-disable');
       }else{
@@ -99,7 +100,8 @@ $(document).ready(function(){
     });
     
     $('.form__select-field._2').on('change', function () {
-      if($(this).find('option').filter(':selected').text() != "Select one..."){
+      if(($(this).find('option').filter(':selected').text() != "Select one...")
+	&& ($('.form__select-field._1').find('option').filter(':selected').text() != "Select one...")){
       	$('.error-code').addClass('hide');
         $('.btn-next4').removeClass('btn-disable');
       }else{
