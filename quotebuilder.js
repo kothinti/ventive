@@ -125,43 +125,21 @@ $(document).ready(function(){
     //Step 5
     
     $('.overtime-per-week').on('input', function() {
-    	if($(".overtime-per-week").val().length != 0){
-      	$('.error-code').addClass('hide');
-        $('.btn-next5').removeClass('btn-disable');
+      if($(".overtime-per-week").val().length >= 0){
+	$('.error-code').addClass('hide');
+	$('.btn-next5').removeClass('btn-disable');
       }else{
-      	$('.btn-next5').addClass('btn-disable');
+	$('.btn-next5').addClass('btn-disable');
       }
     });
 
     $('.btn-next5').click(function(){
-    	$('.quote-step5').hide();
-      $('.quote-step6').show();
+	if($(".overtime-per-week").val().length >= 0){
+    	   $('.quote-step5').hide();
+      	   $('.quote-step6').show();
+	}
     });
     
-    $('.btn-next6').click(function(){
-    	$('.quote-step6').hide();
-      $('.quote-step7').show();
-    });
-    
-    $('.btn-next7').click(function(){
-    	$('.quote-step7').hide();
-      $('.quote-step8').show();
-    });
-    
-    $('.btn-next8').click(function(){
-    	$('.quote-step8').hide();
-      $('.quote-step9').show();
-    });
-    
-    $('.btn-next9').click(function(){
-    	$('.quote-step9').hide();
-      $('.quote-step10').show();
-    });
-    
-   $('.btn-next10').click(function(){
-    	$('.quote-step10').hide();
-      $('.quote-step11').show();
-    });
     
     //Back button
     $('.btn-back1').click(function(){
