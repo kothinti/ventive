@@ -125,7 +125,7 @@ $(document).ready(function(){
     //Step 5
     
     $('.overtime-per-week').on('input', function() {
-      if($(".overtime-per-week").val().length >= 0){
+      if($(".overtime-per-week").val().length > 0){
 	$('.error-code').addClass('hide');
 	$('.btn-next5').removeClass('btn-disable');
       }else{
@@ -137,6 +137,8 @@ $(document).ready(function(){
 	if($(".overtime-per-week").val().length > 0){
     	   $('.quote-step5').hide();
       	   $('.quote-step6').show();
+	}else{
+	   $('.btn-next5').addClass('btn-disable');
 	}
     });
     
