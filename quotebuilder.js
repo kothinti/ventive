@@ -6,7 +6,7 @@ $(document).ready(function(){
     var phone_regex = /^(\+\d{1,2}\s?)?1?\-?\.?\s?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/gm;
 
 		//Step 1
-  	$('.btn-next').click(function(){
+    $('.btn-next').click(function(){
       $( ".form__input-field.company" ).keypress(function() {$('.error-code').addClass('hide');});
       $( ".form__input-field.company" ).focus(function() {$('.error-code').addClass('hide');});
       if($(".form__input-field.company").val().length == 0){$('.error-code').removeClass('hide');}
@@ -134,7 +134,7 @@ $(document).ready(function(){
     });
 
     $('.btn-next5').click(function(){
-	if($(".overtime-per-week").val().length >= 0){
+	if($(".overtime-per-week").val().length > 0){
     	   $('.quote-step5').hide();
       	   $('.quote-step6').show();
 	}
